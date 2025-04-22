@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actors and Movies </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<h1>Actors</h1>
+{% for d in movie %}
+    <div class="movie">
+        <h2>{{ d.name }}</h2>
+        <p><strong>Страна:</strong> {{ d.country }}</p>
+        <p><strong>Год:</strong> {{ d.year }}</p>
+        <p><strong>Описание:</strong> {{ d.description }}</p>
+        <p><strong>Жанр:</strong> {{ d.genre }}</p>
+         image = models.ImageField(upload_to='actor')
+    </div>
+
+{% endfor %}
+</head>
+<body>
+    body {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .movie {
+        background: white;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    p {
+        margin: 5px 0;
+        color: #555;
+    }
+
+    strong {
+        color: #000;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
